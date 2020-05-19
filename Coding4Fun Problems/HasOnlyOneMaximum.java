@@ -2,7 +2,7 @@ package oop.exercise1;
 
 public class HasOnlyOneMaximum {
     public static void main(String [] args){
-        int[] a = {-6, 2,8, 5, -6, 5,8, 6};
+        int[] a = {-6, 2,8, 5, -6, 5, 6};
         hasOnlyOneMaximum(a);
 
     }
@@ -12,16 +12,14 @@ public class HasOnlyOneMaximum {
         for(int i=1; i<a.length; i++){
             if(a[i]>max){
                 max = a[i];
+                count = 0;
+                continue;
+            }if(a[i] == max){
+                count++;
             }
-        }
-        for (int j = 1; j<a.length;j++){
-            if(max == a[j]){
-                count ++;
-            }
-            if(count >1){
-                System.out.println("False");
-                return false;
-            }
+        }if(count>0){
+            System.out.println("False");
+            return false;
         }
         System.out.println("True");
         return true;
