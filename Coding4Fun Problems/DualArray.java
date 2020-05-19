@@ -1,4 +1,4 @@
-package oop.exercise1;
+package se.conding4fun;
 
 public class DualArray {
 
